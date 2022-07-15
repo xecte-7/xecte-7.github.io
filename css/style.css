@@ -39,7 +39,7 @@ body {
 	padding: 10px;
 	/*align-items: center;*/
 	/*box-shadow: 7px 7px 10px 1px #66fcf1;*/
-	box-shadow: 0 0 10px 5px rgba(255,255,255,0.2);
+	box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
 }
 .kontainer nav {
 	display: flex;
