@@ -1,188 +1,178 @@
- /*Personal CSS Styling */
-/* Schema Warna
-	background : #1B2430
-	kontainer : #1f2833
-	lightblue : #66fcf1
- */
-
-/* Setting Universal */
+/* CSS Reset */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'poppins',sans-serif;
-	/*border-style: solid;
-	border-width: 1px;
-	border-color: white;*/
-}
-img {
-	cursor: pointer;
-}
-h1,p,span {
-	color:  white;
-}
-.text-console {
-	font-family: "consolas";
-}
-body {
-	background-color: #1B2430;
-	overflow: hidden;
+	/*border: 1px solid white;*/
 }
 
-/* Bagian Kontainer */
+/* Warna */
+/* #121212 untuk background */
+/* #1B2430 untuk background */
+/* #1f2833 untuk kontainer */
+/* #66fcf1 untuk lightblue */
+
+/* Konfigurasi Utama */
+body {background-color: #1B2430;}
+h1, h2, h3, h4, h5, h6, p, span, button, div { font-family: 'poppins', sans-serif; color: white; }
+.ruang-kosong { display: block; height: 50px; }
+.text-normal { font-size: 14px; font-weight: 300; }
+.text-console { font-family: consolas; font-size: 15px; font-weight: 300; }
+@keyframes textGlow {
+	0% { color: white; text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+	50% { color: #66fcf1; text-shadow: 0 0 20px 10px #66fcf1; }
+}
+@keyframes buttonGlow {
+	0% { color: white; box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); }
+	50% { box-shadow: 0px 0px 10px 3px #66fcf1; }
+}
+@keyframes imageGlow {
+	0% { box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+	50% { box-shadow: 0 0 10px 3px #66fcf1; }
+}
+
+
+/* KONTAINER */
 .kontainer {
 	display: block;
+	width: 96%;
+	margin: 2% 2%;
 	background-color: #1f2833;
-	margin: 5% auto;
-	width: 90%;
-	border-radius: 10px;
-	padding: 10px;
-	/*align-items: center;*/
-	/*box-shadow: 7px 7px 10px 1px #66fcf1;*/
-	box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
-}
-.kontainer nav {
-	display: flex;
-	width: 100%;
-	justify-content: space-around;
-	margin: auto 10px;
-}
-.logo {
-	display: inline-block;
-	cursor: pointer;
-	overflow: visible;
-	color:  white;
-	font-size: 40px;
-	font-weight: 800;
-	text-transform: uppercase;
-	margin: auto 25px;
-	cursor: pointer;
-	overflow: visible;
-}
-.kontainer b {
-	color:  #66fcf1;
-}
-.menuNav {
-	display: flex;
-	margin: auto;
-}
-.menuNav li {
-	list-style: none;
-}
-.menuNav li a {
-	color:  white;
-	font-size: 20px;
-	font-weight: 500;
-	letter-spacing: 1px;
-	text-decoration: none;
-	text-transform: capitalize;
-	margin: auto 10px;
-}
-.icon-sosmed {
-	display: inline-block;
-	margin:  auto 25px;
-}
-.icon-sosmed a {
-	color: white;
-	font-size: 25px;
-	letter-spacing: 20px;
-}
-.menuNav li:hover a,
-.icon-sosmed a:hover {
-	color: #66fcf1;
-	animation-name: transisi-navigasi;
-	animation-duration: 0.5s;
-	text-shadow: 0 0 20px #66fcf1;
+	box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* Bagian Kontainer-2 */
-.kontainer-2 {
-	display: inline-block;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
-	padding: 2.5%;
-	margin: 5% auto auto auto;
-}
-.area-kiri {
-	display: inline-block;
-	width: 55%;
-	margin: 10px 3% auto auto;
-}
-.area-kanan {
-	display: inline-block;
-	width: 35%;
-	margin: 10px auto auto 3%;
-}
-.area-kiri h1 {
-	font-size: 55px;
-	font-weight: 500;
-}
-.area-kiri p {
-	font-size: 14px;
-	font-weight: 300;
-}
-.tombol {
-	width: 100%;
-	margin: 5% auto;
-}
-.tombol button {
-	height: 30px;
-	width: 25%;
-	padding: 2px 6px;
+
+/* NAVIGASI */
+.navBar { display: flex; }
+.navLogo, .navMenu, .navMenu li, .navSosmedIcon { display: flex; }
+/* Navigasi :: Logo */
+.navLogo { margin: 10px auto 10px 40px; }
+.navLogo h1 { font-size: 40px; cursor: pointer; }
+.navLogo span { color: #66fcf1; }
+/* Navigasi :: Menu */
+.navMenu { margin: 10px auto; }
+.navMenu li { list-style: none; }
+.navMenu li a {
 	margin: auto 10px;
-	outline: none;
-	border: none;
-	cursor: pointer;
-	font-weight: 500;
-	border-radius: 5px;
-	box-shadow: 0 0 10px rgba(255,255,255,0.2);
-}
-.tombol button:hover {
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 3px;
 	color: white;
-	background-color: #66fcf1;
-	box-shadow: 0 0 10px #66fcf1;
-	animation-name: transisi-tombol;
+	text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+/* Navigasi :: SosmedIcon */
+.navSosmedIcon { margin: 25px 40px auto auto; }
+.navSosmedIcon span {
+	font-size: 30px;
+	margin: auto 10px;
+	text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+/* Lainnya */
+.navMenu li a:hover, .navSosmedIcon span:hover {
+	color: #66fcf1;
+	text-shadow: 0 0 10px 3px #66fcf1;
+	animation-name: textGlow;
 	animation-duration: 1s;
 }
-.nama {
-	color: #66fcf1;
-	font-size: 25px;
-	text-transform: uppercase;
+
+
+/* AREA-HOME DAN HOME-KIRI-KANAN */
+.area-home { display: flex; justify-items: center; }
+.home-kiri { width: 55%; /*height: 400px;*/ }
+.home-kanan { width: 45%; /*height: 400px;*/ }
+.home-kiri h1 { font-size: 65px; text-transform: capitalize; }
+.home-kiri .efekKetik { color: #66fcf1; }
+.home-tombol button {
+	border: none;
+	outline: none;
+	background-color: white;
+	color: #1B2430;
+	padding: 5px 15px;
 	font-weight: 500;
-	letter-spacing: 2px;
+	border-radius: 15px;
+	margin: auto 10px;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
-.nickname {
+.home-tombol button:hover {
+	background-color: #66fcf1;
+	color: white;
+	box-shadow: 0px 0px 7px 3px #66fcf1;
+	animation-name: buttonGlow;
+	animation-duration: 1s;
+}
+.home-kiri .text-console, .home-kiri h1, .home-kiri p { margin: auto 40px; }
+
+.profpic {
+	border-radius: 50%;
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	margin: auto auto 10px auto;
+}
+.profpic:hover {
+	box-shadow: 0 0 10px 3px #66fcf1;
+	animation-name: imageGlow;
+	animation-duration: 1s;
+}
+.home-kanan h1 {
+	text-transform: uppercase;
+	font-size: 30px;
+	color: #66fcf1;
+}
+.home-kanan p {
 	font-style: italic;
 }
-.profpic {
-	width: 200px;
-	height: 200px;
-	object-fit: cover;
-	border-radius: 50%;
-	margin: auto auto 2.5% auto;
-	box-shadow: 0 0 20px rgba(255,255,255,0.2);
+
+
+/* AREA-SKILLS dan SKILLS-PERCENTAGE */
+.area-skills {
+	display: block;
+	width: 100%;
 }
-.area-kanan img:hover {
-	animation-name: transisi-gambar;
-	animation-duration: 2s;
-	box-shadow: 0 0 10px #66fcf1;
+.area-skills h1 {
+	text-transform: uppercase;
+	font-size: 25px;
+	font-weight: 600;
+	margin: 20px auto;
 }
-@keyframes transisi-tombol {
-	0% {box-shadow: 0 0 20px rgba(255,255,255,0.2);}
-	50% {box-shadow: 0 0 15px #66fcf1;}
-	100% {box-shadow: 0 0 10px #66fcf1; color: white;}
+.area-skills .skills-box {
+	display: block;
+	background-color: #1f2833;
+	width: 50%;
+	/*height: 200px;*/
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	padding: 20px;
 }
-@keyframes transisi-gambar {
-	0% {box-shadow: 0 0 20px rgba(255,255,255,0.2);}
-	50% {box-shadow: 0 0 20px #66fcf1;}
-	100% {box-shadow: 0 0 10px #66fcf1;}
+.box-bughunt, .box-webprog, .box-maclearn {
+	display: flex;
+	width: 100%;
+	height: 30px;
+	align-items: center;
+	/*border: 1px solid green;*/
 }
-@keyframes transisi-navigasi {
-	0% {text-shadow: none;}
-	100% {text-shadow: 0 0 20px #66fcf1;}
+.bar-bughunt, .bar-webprog, .bar-maclearn {
+	width: 60%;
+	height: 30%;
+	border-radius: 15px;
+	background-color: #ffffff;
+	margin: auto 5px auto auto;
 }
-.typingText {
-	color: #66fcf1;
-	text-transform: capitalize;
+.progress { margin: auto auto auto 0; height: 100%; border-radius: 15px; }
+.bar-bughunt .progress { width: 60%; background-color: cyan; }
+.bar-webprog .progress { width: 50%; background-color: cyan; }
+.bar-maclearn .progress { width: 40%; background-color: cyan; }
+
+
+/* AREA PROJECTS */
+.area-projects {
+	display: block;
+	width: 100%;
+}
+.area-projects h1 {
+	text-transform: uppercase;
+	font-size: 25px;
+	font-weight: 600;
+	margin: 20px auto;
 }
