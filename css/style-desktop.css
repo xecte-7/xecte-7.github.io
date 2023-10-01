@@ -9,12 +9,12 @@ html{scroll-behavior:smooth}
 /**/
 #main-container {
 	width: 100%;
-	height: 720px;
+	height: auto;
 /*	border: 1px solid red;*/
 }
 .glb-container {
 	width: 100%;
-	height: 100px;
+	height: auto;
 /*	border: 1px solid red;*/
 	color: #ffffff;
 	background-color: #000001;
@@ -164,7 +164,7 @@ html{scroll-behavior:smooth}
 	display: block;
 	width: 100%;
 	height: auto;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	padding-left: 3%;
 	padding-right: 3%;
@@ -235,7 +235,7 @@ html{scroll-behavior:smooth}
 .wrapper-Keunggulan-left, .wrapper-Keunggulan-right {
 	width: 49%;
 	height: auto;
-	border: 1px solid red;
+/*	border: 1px solid red;*/
 }
 
 /* 6 - Testimoni */
@@ -353,8 +353,8 @@ html{scroll-behavior:smooth}
 	justify-content: space-between;
 	padding-left: 3%;
 	padding-right: 3%;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 .wrapper-Footer-body {
 	width: 100%;
@@ -374,7 +374,9 @@ html{scroll-behavior:smooth}
 	color: #66fcf1;
 	letter-spacing: 1px;
 }
+.txt-Footer-desc {
 
+}
 .decor-Footer-line {
 	width: 100%;
 	height: 1px;
