@@ -363,8 +363,9 @@ html{scroll-behavior:smooth}
 	justify-content: space-between;
 }
 .section-Footer {
-	width: 24%;
+	width: 23%;
 	height: auto;
+	display: block;
 /*	border: 1px solid green;*/
 	padding: 5px;
 }
@@ -375,7 +376,8 @@ html{scroll-behavior:smooth}
 	letter-spacing: 1px;
 }
 .txt-Footer-desc {
-
+	font-family: "Bebas Neue", sans-serif;
+	font-size: 14px;
 }
 .decor-Footer-line {
 	width: 100%;
