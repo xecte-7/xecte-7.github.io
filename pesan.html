@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/pesan-desktop.css">
+	<link rel="stylesheet" type="text/css" href="./css/pesan-mobile.css">
+	<title>Buat Pesanan | Portal-IT.ID</title>
+	<!-- Online CSS Source -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
+</head>
+<body>
+
+	<!-- Start of Main Container -->
+	<div id="main-container">
+		
+		<!-- Box Form -->
+		<div id="box-form">
+			<!-- Form head -->
+			<div id="form-head">
+				<h1 id="form-title">Form Pemesanan</h1>
+			</div>
+			<!-- Form body -->
+			<form method="POST" action="pesan.php">
+				<div id="form-body">
+					<!-- Nama Lengkap -->
+					<label for="inputNama">Nama Lengkap</label> <span style="color: red;">*</span>
+					<input type="text" name="inputNama" placeholder="Ex: John Doe">
+					<!-- Nomor HP -->
+					<label for="inputNoHP">Nomor Handphone (WhatsApp)</label> <span style="color: red;">*</span>
+					<input type="tel" name="inputNoHP" placeholder="Ex: 08xx-xxxx-xxxx">
+					<!-- Email -->
+					<label for="inputEmail">Email</label> <span style="color: red;">*</span>
+					<input type="email" name="inputEmail" placeholder="Ex: youremail@gmail.com">
+					<!-- Pesan -->
+					<label for="inputPesan">Ketikkan Pesanan Anda</label> <span style="color: red;">*</span>
+					<textarea name="inputPesan" cols="30" rows="10" placeholder="Ex: Saya ingin memesan jasa ..."></textarea>
+					<!-- Submit -->
+					<input type="submit" name="btnPesan" value="Buat Pesanan" id="btnPesan">
+				</div>
+			</form>
+			<!-- Form footer -->
+			<div id="form-footer">
+				<p>Copyright (c) CV.Portal-IT.ID 2023</p>
+			</div>
+		</div>
+
+	</div>
+	<!-- End of Main Container -->
+
+</body>
+</html>
